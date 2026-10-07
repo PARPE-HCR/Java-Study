@@ -18,23 +18,38 @@ public class java_2 {
 			String name = scanner.nextLine();
 			if(name.equals(key_name))
 			{
-				while(true)
-				System.out.print("로그인 비밀번호:");
-				int password = scanner.nextInt();
-				if(password == key_password)
+				while(true)//비밀번호 틀림/재입력의 반복
 				{
-					System.out.print("로그인 성공!");
-					break;
+					System.out.print("로그인 비밀번호:");
+					int password = scanner.nextInt();
+					if(password == key_password)
+					{
+						System.out.println("로그인 성공!");
+						return;
+					}
+					else
+					{
+						System.out.println("비밀번호가 틀렸습니다");
+						try_num++;
+						if(try_num >=3)
+						{
+							System.out.println("로그인을 중단합니다");
+							return;
+						}
+					}
 				}
-				else
+			}
+			else
+			{
+				System.out.println("아이디가 틀렸습니다");
+				try_num++;
+				if(try_num >= 3)
 				{
-					System.out.println("비밀번호가 틀렸습니다");
-					try_num++;
+					System.out.println("로그인을 중단합니다");
+					return;
 				}
-		
-			
 			}	
-	
 		}
 	}
 }
+
