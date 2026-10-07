@@ -11,13 +11,14 @@ public class java_2 {
 		int try_num = 0;
 		//String name;
 		//int password;
-		while(true)
+		while(true) //로그인 시스템 자체의 반복
 		{
 			Scanner scanner = new Scanner(System.in);
 			System.out.print("로그인 아이디:");
 			String name = scanner.nextLine();
 			if(name.equals(key_name))
 			{
+				while(true)
 				System.out.print("로그인 비밀번호:");
 				int password = scanner.nextInt();
 				if(password == key_password)
@@ -28,11 +29,12 @@ public class java_2 {
 				else
 				{
 					System.out.println("비밀번호가 틀렸습니다");
+					try_num++;
 				}
-				
-				
-			}
+		
+			
+			}	
+	
 		}
 	}
-
 }
