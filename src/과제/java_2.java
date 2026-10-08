@@ -9,8 +9,7 @@ public class java_2 {
 		String key_name = "Kim";
 		int key_password = 12345;
 		int try_num = 0;
-		//String name;
-		//int password;
+		
 		while(true) //로그인 시스템 자체의 반복
 		{
 			Scanner scanner = new Scanner(System.in);
