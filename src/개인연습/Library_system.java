@@ -17,28 +17,62 @@ public class Library_system {
 			case 1:{
 				System.out.print("도서이름:");
 				String Bookname = scanner.nextLine();
-				int result = addBook(BookList,Bookname);
-				System.out.println("도서가 등록되었습니다");
+				int result = addBook(BookList,isBorrowed,Bookname);
+				if (result !=-1) {
+					System.out.println("도서가 등록되었습니다");
+				}
+				else {
+					System.out.println("이미 등록된 도서입니다");
+				}
 				break;
 		    }
 			case 2:{
 				System.out.print("도서이름:");
 				String Bookname = scanner.nextLine();
 				int result1 = borrowBook(BookList,isBorrowed,Bookname);
-				System.out.println("도서가 대여되었습니다");
+				if (result1 !=-1) {
+					System.out.println("도서가 대여되었습니다");
+				}
+				else {
+					System.out.println("이미 대여된 도서입니다");
+				}
 				break;
 		    }
 			case 3:{
+				System.out.print("도서이름:");
+				String Bookname = scanner.nextLine();
+				int result1 = returnBook(BookList,isBorrowed,Bookname);
+				if (result1 !=-1) {
+					System.out.println("도서가 반납되었습니다");
+				}
+				else {
+					System.out.println("이미 반납된 도서입니다");
+				}
+				break;
+			}
+			case 4:{
 				showBook(BookList,isBorrowed);
 				break;
 			}
+			case 5:{
+				System.out.print("잘못된 입력입니다");
+				return;
+			}
+			default:
+				System.out.print("잘못된 입력입니다");
+				break;
 		  }
 	   }
 	}
 	//도서관 책 등록 메소드
-	public static int addBook(String[] BookList,String Bookname) {
+	public static int addBook(String[] BookList,boolean[] isBorrowed,String Bookname) {
 		for(int i=0;i<BookList.length;i++) {
-			if(BookList[i]==null) {
+			if(BookList[i]!=null && BookList[i].equals(Bookname)) {
+				return -1;
+			}
+		}
+		for(int i=0;i<BookList.length;i++) {
+			if(BookList[i]==null &&isBorrowed[i] == false) {
 				BookList[i] = Bookname;
 				return i;
 			}
@@ -48,9 +82,22 @@ public class Library_system {
 	//도서관 책 대여 메소드
 	public static int borrowBook(String[] BookList,boolean[] isBorrowed,String Bookname) {
 		for(int i=0;i<BookList.length;i++) {
-			if(BookList[i] !=null && BookList[i].equals(Bookname))
+			if(BookList[i] !=null && BookList[i].equals(Bookname) && isBorrowed[i] == false)
 			{
 				isBorrowed[i] = true;
+				return i;
+			}	
+		}
+		return -1;
+	}
+		
+
+	//도서 반납 메소드
+	public static int returnBook(String[] BookList,boolean[] isBorrowed,String Bookname) {
+		for(int i=0;i<BookList.length;i++) {
+			if(BookList[i] !=null && BookList[i].equals(Bookname) && isBorrowed[i] == true)
+			{
+				isBorrowed[i] = false;
 				return i;
 			}
 		}
