@@ -55,7 +55,7 @@ public class Library_system {
 				break;
 			}
 			case 5:{
-				System.out.print("잘못된 입력입니다");
+				System.out.print("시스템을 종료합니다");
 				return;
 			}
 			default:
