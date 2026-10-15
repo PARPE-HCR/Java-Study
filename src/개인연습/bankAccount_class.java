@@ -25,9 +25,30 @@ public class bankAccount_class {
 				break;
 			}
 			case 2:{
+				System.out.print("출금금액:");			
+				int amount = scanner.nextInt();
+				s1.withdraw(amount);
+				break;
+			}
+			case 3:{
+				System.out.println("현재 잔액입니다");			
+				System.out.printf("잔액:%d\n",s1.getBalance());
+				break;
+			}
+			case 4:{
+				System.out.println("계좌정보:");			
+				s1.show();
+				break;
+			}
+			
+			case 5:{
 				System.out.println("시스템 종료");
 				return;
 			}
+			default:{
+				System.out.println("잘못된 입력입니다");
+				break;
+			}	
 		} 
 	}	
 }
@@ -39,12 +60,17 @@ class BankAccount{
 	public BankAccount(String owner,String accountNumber) {
 		this.owner = owner;
 		this.accountNumber = accountNumber;
-		int balance = 0;
+		this.balance = 0;
 	}
 	public BankAccount(String owner,String accountNumber,int balance) {
 		this.owner = owner;
 		this.accountNumber = accountNumber;
-		this.balance = balance;
+		if(balance >= 0) {
+			this.balance = balance;
+		}
+		else {
+			this.balance = 0;
+		}
 	}
 	public boolean deposit(int amount) {
 		if(amount > 0) {
@@ -58,7 +84,7 @@ class BankAccount{
 		}
 	}
 	public boolean withdraw(int amount) {
-		if(amount > 0) {
+		if(amount < balance) {
 			balance -=amount;
 			System.out.println("출금 성공");
 			return true;
