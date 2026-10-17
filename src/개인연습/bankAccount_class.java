@@ -80,7 +80,7 @@ class BankAccount{
 		}
 		else {
 			System.out.println("입금 실패");
-			 return false;
+			return false;
 		}
 	}
 	public boolean withdraw(int amount) {
@@ -91,7 +91,7 @@ class BankAccount{
 		}
 		else {
 			System.out.println("출금 실패");
-			 return false;
+			return false;
 		}
 	}
 	public int getBalance() {

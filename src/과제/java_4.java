@@ -23,11 +23,7 @@ public class java_4 {
 				max = NumArray[i];
 			}
 		}
-		System.out.printf("가장 큰 수는 %d 입니다",max);
-		
-		
-		
-		
+		System.out.printf("가장 큰 수는 %d 입니다",max);	
 	}
 
 }

@@ -18,41 +18,31 @@ public class java_3 {
 			for(i=0;i<1;i++){
 				int select_num = (int)(Math.random() * strGame.length);
 				//System.out.print(strGame[select_num]);
-				if(ins.equals("가위") && strGame[select_num].equals("보"))
-				{
-					System.out.printf("사용자는 %s,컴퓨터는 %s.사용자가 이겼습니다",ins,strGame[select_num]);
-					System.out.println("");
+				if(ins.equals("가위") && strGame[select_num].equals("보")) {
+				System.out.printf("사용자는 %s,컴퓨터는 %s.사용자가 이겼습니다",ins,strGame[select_num]);
+				System.out.println("");
 				}
-				else if(ins.equals("바위") && strGame[select_num].equals("가위"))
-				{
-					System.out.printf("사용자는 %s,컴퓨터는 %s.사용자가 이겼습니다",ins,strGame[select_num]);
-					System.out.println("");
+				else if(ins.equals("바위") && strGame[select_num].equals("가위")) {
+				System.out.printf("사용자는 %s,컴퓨터는 %s.사용자가 이겼습니다",ins,strGame[select_num]);
+				System.out.println("");
 				}
-				
-				else if(ins.equals("보") && strGame[select_num].equals("바위"))
-				{
-					System.out.printf("사용자는 %s,컴퓨터는 %s.사용자가 이겼습니다",ins,strGame[select_num]);
-					System.out.println("");
+				else if(ins.equals("보") && strGame[select_num].equals("바위")){
+				System.out.printf("사용자는 %s,컴퓨터는 %s.사용자가 이겼습니다",ins,strGame[select_num]);
+				System.out.println("");
 				}
-				else if(ins.equals(strGame[select_num]))
-				{
-					System.out.printf("사용자는 %s,컴퓨터는 %s.비겼습니다",ins,strGame[select_num]);
-					System.out.println("");
+				else if(ins.equals(strGame[select_num])) {
+				System.out.printf("사용자는 %s,컴퓨터는 %s.비겼습니다",ins,strGame[select_num]);
+				System.out.println("");
 				}
-				else if(ins.equals("종료"))
-				{
-					System.out.print("게임을 종료합니다");
-					return;
+				else if(ins.equals("종료")) {
+				System.out.print("게임을 종료합니다");
+				return;
 				}
-				else
-				{
-					System.out.printf("사용자는 %s,컴퓨터는 %s.컴퓨터가 이겼습니다",ins,strGame[select_num]);
-					System.out.println("");
+				else {
+				System.out.printf("사용자는 %s,컴퓨터는 %s.컴퓨터가 이겼습니다",ins,strGame[select_num]);
+				System.out.println("");
 				}
 			}
 		}
-		
-		
 	}
-
 }
