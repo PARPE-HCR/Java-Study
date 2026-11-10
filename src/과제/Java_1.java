@@ -8,12 +8,10 @@ public class Java_1 {
 		int i,j;
 		for(i=0;i<4;i++)
 		{
-			for(j=0;j<(i+1)*2;j++)
-			{
+			for(j=0;j<(i+1)*2;j++) {
 				System.out.print(myCh[i]);
 			}
 			System.out.println("");
 		}
 	}
-
 }

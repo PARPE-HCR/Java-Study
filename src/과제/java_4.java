@@ -12,7 +12,6 @@ public class java_4 {
 		int max = NumArray[0];
 		Scanner scanner = new Scanner(System.in);
 		
-		
 		System.out.println("양수 5개를 입력하세요");
 		
 		for(i=0;i<NumArray.length;i++)

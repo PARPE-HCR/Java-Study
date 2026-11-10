@@ -16,7 +16,7 @@ public class java_3 {
 			String ins = scanner.nextLine();
 			
 			for(i=0;i<1;i++){
-				int select_num = (int)(Math.random() * strGame.length);
+				int select_num = (int) (Math.random() * strGame.length);
 				//System.out.print(strGame[select_num]);
 				if(ins.equals("가위") && strGame[select_num].equals("보")) {
 				System.out.printf("사용자는 %s,컴퓨터는 %s.사용자가 이겼습니다",ins,strGame[select_num]);

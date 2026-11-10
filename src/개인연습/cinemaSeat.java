@@ -1,7 +1,7 @@
 package 개인연습;
 import java.util.Scanner;
 public class cinemaSeat {
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
@@ -20,7 +20,7 @@ class Seat {
 		public Seat (String name,int seatNum,boolean res) {
 		this.name = name;
 		this.seatNum = seatNum;
-		this.res = res; //초기 예약상태 가능
+		this.res = res;
 	}
 }
 //좌석예약 시스템
@@ -29,7 +29,7 @@ class Cinema {
 	public Cinema(int size) {
 		Seats = new Seat[size];
 		for(int i=0;i<Seats.length;i++) {
-			Seats[i] = new Seat(null, i + 1,false);
+			Seats[i] = new Seat(null, i + 1,false); //기본상태 false
 		}
 	}
 	void seatReserve(String name,int seatNum) {
