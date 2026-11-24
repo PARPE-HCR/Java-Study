@@ -26,6 +26,7 @@ public class java_2 {
 						try_Num++;
 						if(try_Num >= 3) {
 							System.out.print("로그인 중단");
+							scanner.close();
 							return;
 						}
 					}
@@ -36,6 +37,7 @@ public class java_2 {
 				try_Num++;
 				if(try_Num >= 3) {
 					System.out.print("로그인 중단");
+					scanner.close();
 					return;
 				}
 			}

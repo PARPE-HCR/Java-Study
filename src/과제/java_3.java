@@ -36,6 +36,7 @@ public class java_3 {
 				}
 				else if(ins.equals("종료")) {
 				System.out.print("게임을 종료합니다");
+				scanner.close();
 				return;
 				}
 				else {

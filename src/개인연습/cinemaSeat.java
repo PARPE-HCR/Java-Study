@@ -152,6 +152,7 @@ class Cinema {
 			    }
 			    case 6:{
 			    		System.out.print("시스템을 종료합니다");
+			    		scanner.close();
 			    		return;
 			    }
 			    default:{

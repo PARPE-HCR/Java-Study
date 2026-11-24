@@ -43,6 +43,7 @@ public class bankAccount_class {
 			
 			case 5:{
 				System.out.println("시스템 종료");
+				scanner.close();
 				return;
 			}
 			default:{

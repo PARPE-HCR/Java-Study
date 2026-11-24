@@ -8,8 +8,10 @@ public class 재고관리_프로그램 {
 		System.out.println("===재고관리 시스템===");
 		System.out.print("최대 상품 등록개수>>>");
 		int size = scanner.nextInt();
+		
 		Inventory myMarket = new Inventory(size);
 		myMarket.run();
+		scanner.close();
 	}
 }
 
@@ -110,6 +112,7 @@ class Inventory{
 				}
 				case 5:{
 					System.out.print("시스템을 종료합니다");
+					scanner.close();
 					return;
 				}
 				default:{
